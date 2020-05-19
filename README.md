@@ -29,3 +29,5 @@ curl --header "Content-Type: application/json" \
   http://localhost:3000/transcode
 ```
 
+Future improvements may include using something like [fluent-ffmpeg](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg) instead of calling ffmpeg from the cli.
+
