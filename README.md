@@ -26,7 +26,7 @@ gcloud run deploy --image gcr.io/$GCLOUD_PROJECT_ID/$PROJECT_NAME --platform man
 curl --header "Content-Type: application/json" \
   --request POST \
   --data '{"input_uri":"s3://input-bucket/test.mp4", "output_uri":"s3://output-bucket/video/output.mkv"}' \
-  http://localhost:3000/transcode
+  http://localhost:8080/transcode
 ```
 
 Future improvements may include using something like [fluent-ffmpeg](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg) instead of calling ffmpeg from the cli.
