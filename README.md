@@ -20,3 +20,12 @@ docker push gcr.io/$GCLOUD_PROJECT_ID/$PROJECT_NAME
 gcloud run deploy --image gcr.io/$GCLOUD_PROJECT_ID/$PROJECT_NAME --platform manage
 ```
 
+## Example Curl Command
+
+```
+curl --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"input_uri":"s3://input-bucket/test.mp4", "output_uri":"s3://output-bucket/video/output.mkv"}' \
+  http://localhost:3000/transcode
+```
+
